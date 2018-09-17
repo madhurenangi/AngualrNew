@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="col-sm-12" style="float:right">
+  <a class="fa fa-plus faright" (click)="open(content)"></a>
+    <table class="table table-bordered" *ngIf="userDetails.length!=0">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Pin</th>
+        <th>Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userDetails;let i = index">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.pin}}</td>
+        <td><i class="fa fa-pencil" (click)="editFormData(content,i)"></i><i class="fa fa-trash" (click)="deleteRecord(i,success)"></i></td>
+      </tr>
+    </tbody>
+    </table>
+    <ng-template #content let-modal>
+      <div class="modal-header bg-danger">
+        <h4 class="modal-title txtcolor" id="modal-basic-title"><i class="fa fa-user"></i>User Form</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="border:1px solid #e4f6f8">
+        <div class="row">
+
+          <div class="col-sm-12">
+            <form style="margin-top:20px;" #userForm="ngForm">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="text" [(ngModel)]="userData.name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="userData.email">
+              </div>
+              <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" class="form-control" name="city" [(ngModel)]="userData.city">
+              </div>
+              <div class="form-group">
+                <label for="pin">Pin Code:</label>
+                <input type="number" class="form-control" name="pin" [(ngModel)]="userData.pin">
+              </div>
+               <button type="submit" class="btn btn-primary" (click)="saveFormData(userData,success);modal.close()">{{lbltext}}</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer bg-light">
+
+        <!-- <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button> -->
+      </div>
+    </ng-template>
+  </div>
+
+</div>
+<ng-template #success let-modal>
+    <app-loader [alertType]="alertType" [message]="message" (closefunction)="closefunction()" (delete)="delete()"></app-loader>
+</ng-template>

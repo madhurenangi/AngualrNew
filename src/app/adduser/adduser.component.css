@@ -1,0 +1,12 @@
+.modal-content{
+    left:25% !important;
+    width:50% !important;
+    position: relative;
+}
+.fa{
+    margin-right:10px;
+    
+}
+.faright{
+    float:right;
+}

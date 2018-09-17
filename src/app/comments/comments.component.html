@@ -1,0 +1,46 @@
+<!-- <div class="container-fluid">
+  <div style="margin-top:20px;">
+    <div *ngFor="let comments of userCommnets;let i=index">
+    <div class="topbox">
+    <div class="leftplus"><a (click) = "showdiv(i+1)">+</a></div>
+    <div class="rightplus">
+    <div *ngIf="show==i+1">{{comments.email}}</div>
+      <div style="padding:10px;" *ngIf="show!=i+1">
+          <div>{{comments.body}}</div>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+    </div>
+  </div> -->
+<div class="container-fluid">
+  <div style="margin-top:20px;">
+    <div *ngFor="let comments of userCommnets;let i=index">
+      <div class="fdiv">
+        <div class="mainDiv">
+          <div class="topDiv">
+            <div class="plus">
+              <a (click)="showdiv(i+1)">+</a>
+            </div>
+          </div>
+          <div>
+            <div *ngIf="show!=i+1" style="padding-left:10px;">{{comments.name}} {{comments.email}}</div>
+            <div style="padding:10px;" *ngIf="show==i+1">
+              <div>{{comments.body}}</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row" style="position: absolute;top:300px;left:50%;">
+  <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#363232" type="ball-fussion">
+  </ngx-spinner>
+</div>

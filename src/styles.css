@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+/* .modal-backdrop.show {
+    opacity: 0;
+    transition: 4s;
+  } */
+  
+  .modal-content {
+    opacity: 0.8;
+    transition: 0.15s;
+  }
+  .txtcolor{
+      color:#fff;
+  }
+  .card-img-top {
+     width:40%;
+     height:40%;
+  }
+  pre{
+      font-size:14px;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
