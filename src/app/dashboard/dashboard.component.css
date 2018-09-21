@@ -1,0 +1,29 @@
+.mainDiv{
+border:1px solid #06688f;
+border-radius: 5px;
+position: relative;
+float:left;
+width:220px;
+height: 150px;
+margin:10px;
+color:#fff;
+padding:5px;
+box-shadow: 1px 1px rgb(138, 137, 137); 
+
+}
+.innerTxt{
+    position: absolute;
+    padding:5px;
+    font-size:15px;
+    right: -15px;
+    bottom: -7px;
+}
+.colorDiv{
+background-color:#06688f;
+}
+.colorDiv1{
+    background-color:#8f066d;
+}
+.colorDiv2{
+    background-color:#22b169;
+}

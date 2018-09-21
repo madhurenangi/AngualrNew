@@ -16,6 +16,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { CommentsComponent } from './comments/comments.component';
 import { AdduserComponent } from './adduser/adduser.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -32,6 +33,7 @@ import { AdduserComponent } from './adduser/adduser.component';
     FooterComponent,
     CommentsComponent,
     AdduserComponent,
+    DashboardComponent,
     
   ],
   imports: [
@@ -44,7 +46,8 @@ import { AdduserComponent } from './adduser/adduser.component';
     RouterModule.forRoot([
       {path:'users',component:UserDetailsComponent},
       {path:'comments',component:CommentsComponent},
-      {path:'add',component:AdduserComponent}
+      {path:'add',component:AdduserComponent},
+      {path:'dashboard',component:DashboardComponent}
     ])
     
   ],
